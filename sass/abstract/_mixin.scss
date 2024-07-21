@@ -1,37 +1,44 @@
-@mixin flex() {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin absoluteCenter() {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-//Responsive
-@mixin respond($breakPoint) {
-  @if $breakPoint == smallPhone {
-    @media only screen and (max-width: 575.98px) {
-      @content;
-    }
-  } @else if $breakPoint == phone {
-    @media only screen and (min-width: 576px) and (max-width: 767.98px) {
-      @content;
-    }
-  } @else if $breakPoint == tablets {
-    @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-      @content;
-    }
-  } @else if $breakPoint == bigTablets {
-    @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
-      @content;
-    }
-  } @else if $breakPoint == desktop {
-    @media only screen and (min-width: 1200px) {
-      @content;
-    }
+@mixin center($type) {
+  @if $type == "center" {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $type == "fixed" {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $type == "flex" {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } @else {
+    @warn "Unknown centering type: #{$type}";
   }
+}
+
+@mixin grid($col, $gap) {
+  display: grid; // Set display grid by default
+
+  @if $col == "2-col" {
+    grid-template-columns: 1fr 1fr;
+  } @else if $col == "3-col" {
+    grid-template-columns: repeat(3, 1fr);
+  } @else if $col == "4-col" {
+    grid-template-columns: repeat(4, 1fr);
+  } @else {
+    @warn "Unknown column configuration: #{$col}. Defaulting to 1-column layout.";
+    grid-template-columns: 1fr; // Default case
+  }
+
+  gap: $gap;
+}
+
+@mixin centerContent() {
+  margin: 0 auto;
+}
+
+@mixin viewPortArea() {
+  height: 100vh;
 }

@@ -1,3 +1,9 @@
-body {
-  background-color: black;
-}
+@import "./abstract/variables";
+@import "./abstract/mixin";
+@import "./abstract/animation";
+
+@import "./base/base";
+@import "./base/utility";
+
+@import "./layout/header";
+@import "./Pages/Home/homeSectionOne";

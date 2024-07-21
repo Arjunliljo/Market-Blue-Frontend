@@ -1,5 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.6rem;
+}
+
+.app {
   background-color: black;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgb(121, 121, 121);
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.delete {
+  display: none;
+}
+
+.padding-normal {
+  padding: 3rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

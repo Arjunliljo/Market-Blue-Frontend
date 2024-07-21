@@ -8,4 +8,16 @@ html {
 }
 body {
   font-family: "Courier New", Courier, monospace;
+  font-size: 1.6rem;
+}
+.app {
+  background-color: black;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgb(121, 121, 121);
+  width: min(1200px, 100%);
+  @include centerContent;
 }
