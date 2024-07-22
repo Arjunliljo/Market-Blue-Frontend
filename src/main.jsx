@@ -7,6 +7,7 @@ import "./index.css";
 import Home from "./App/Main/Home/Home.jsx";
 import Portfolio from "./App/Main/Portfolio/Portfolio.jsx";
 import Service from "./App/Main/Service/Service.jsx";
+import { AnimationProvider } from "./App/Context/AnimationContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AnimationProvider>
+      <RouterProvider router={router} />
+    </AnimationProvider>
   </React.StrictMode>
 );

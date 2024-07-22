@@ -9,7 +9,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-  } @else if $type == "flex" {
+  } @else if $type == flex {
     display: flex;
     align-items: center;
     justify-content: center;
