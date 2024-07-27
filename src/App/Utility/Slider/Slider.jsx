@@ -62,7 +62,7 @@ function Slider({
         style={sliderStyle}
         aria-label="Image Slider"
       >
-        {!auto && <SliderButton onClick={handleBack} />}
+        {!auto && <SliderButton onClick={handleBack} type="backward" />}
 
         <div className={styles.slider} style={{ width: shoWidth }}>
           <div

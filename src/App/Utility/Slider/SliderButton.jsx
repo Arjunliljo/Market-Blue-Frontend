@@ -2,13 +2,14 @@ import styles from "./SliderButton.module.css";
 
 function SliderButton({ type, onClick }) {
   const buttonLabel = type === "forward" ? "Next Slide" : "Previous Slide";
-
+  console.log(type === "forward");
   return (
     <button
       className={styles.btn}
       onClick={onClick}
       aria-label={buttonLabel}
       title={buttonLabel}
+      style={type == "forward" ? { top: "40%" } : { top: "50%" }}
     >
       {type === "forward" ? (
         <svg
