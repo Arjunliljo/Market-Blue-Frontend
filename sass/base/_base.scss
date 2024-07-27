@@ -9,7 +9,7 @@ html {
 body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.6rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .app {
   background-color: $light-gray;
@@ -17,7 +17,10 @@ body {
   min-height: 300vh;
   margin: 0 auto;
 }
-
+section {
+  width: 100vw;
+  height: 100vh;
+}
 .container {
   background-color: transparent;
   width: min(80%, 100vw);

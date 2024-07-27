@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transition: all 1s cubic-bezier(0.66, 0.44, 0.57, 1.58);
+  background-color: yellow;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.row {
+  display: flex;
+  transition: all 1s;
+}
+.row > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.btn {
+  cursor: pointer;
+  width: 5rem;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  /* display: none; */
+}

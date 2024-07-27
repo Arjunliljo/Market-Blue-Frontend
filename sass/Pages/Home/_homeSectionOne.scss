@@ -10,15 +10,17 @@
     background-color: black;
     color: white;
 
-    animation: homeSectionAnim 1.5s cubic-bezier(0, 0.49, 0.76, 0.82);
+    animation: homeSectionAnim 1.5s cubic-bezier(0.73, -0.03, 0.17, 0.99);
   }
 }
 
 @keyframes homeSectionAnim {
   from {
     transform: scale(0) rotate(30deg);
+    border-radius: 12rem;
   }
   to {
     transform: scale(1) rotate(0deg);
+    border-radius: 0rem;
   }
 }

@@ -11,7 +11,7 @@ html {
 body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.6rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .app {
@@ -19,6 +19,11 @@ body {
   max-width: 100vw;
   min-height: 300vh;
   margin: 0 auto;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
 }
 
 .container {
@@ -113,16 +118,37 @@ body {
   height: 100%;
   background-color: black;
   color: white;
-  animation: homeSectionAnim 1.5s cubic-bezier(0, 0.49, 0.76, 0.82);
+  animation: homeSectionAnim 1.5s cubic-bezier(0.73, -0.03, 0.17, 0.99);
 }
 
 @keyframes homeSectionAnim {
   from {
     transform: scale(0) rotate(30deg);
+    border-radius: 12rem;
   }
   to {
     transform: scale(1) rotate(0deg);
+    border-radius: 0rem;
   }
+}
+.homeSectionThree {
+  background-color: black;
+}
+
+.videoContainer {
+  width: 100vw !important;
+  height: 100vh;
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.videoContainer video {
+  object-fit: cover;
+  height: 100vh;
+  width: 100%; /* Maintain aspect ratio */
 }
 
 /*# sourceMappingURL=style.css.map */

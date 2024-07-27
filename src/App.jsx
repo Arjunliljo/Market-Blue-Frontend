@@ -6,6 +6,7 @@ import { useAnim } from "./App/Context/AnimationContext";
 function App() {
   const { homeAnimationDelay } = useAnim();
 
+
   return (
     <div className="app">
       {!homeAnimationDelay && <Header />}
