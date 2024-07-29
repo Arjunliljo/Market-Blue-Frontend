@@ -7,9 +7,10 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  overflow: hidden;
+  overflow-x: hidden;
+  color: white;
 }
 .app {
   background-color: $light-gray;

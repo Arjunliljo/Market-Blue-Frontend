@@ -1,3 +1,30 @@
 .header {
   font-size: 1.8rem;
 }
+.primary-text-box {
+  @include center(flex);
+
+  position: absolute;
+  top: 30%;
+  font-size: 3rem;
+  z-index: 2;
+}
+.primary-text-box h1 {
+  font-size: 48px;
+  font-weight: 100;
+  animation: homeContentAnim 3s ease forwards;
+  backface-visibility: hidden;
+}
+.primary-text-box h1 span {
+  font-weight: 600;
+  color: rgb(84, 84, 255);
+}
+
+@keyframes homeContentAnim {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}

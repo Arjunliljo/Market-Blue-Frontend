@@ -53,6 +53,10 @@ const CanvasAnimation = () => {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+
+      // Set canvas display size
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
     };
 
     const onMouseMove = (event) => {
@@ -77,8 +81,9 @@ const CanvasAnimation = () => {
 
     const animate = () => {
       if (runningRef.current) {
-        context.globalCompositeOperation = "source-over";
-        context.fillStyle = "transperant";
+        const context = contextRef.current;
+        context.globalCompositeOperation = "destination-out";
+        // context.fillStyle = "rgba(0, 0, 0, 1)";
         context.fillRect(0, 0, canvas.width, canvas.height);
         context.globalCompositeOperation = "lighter";
         context.strokeStyle = "#322486";
@@ -94,22 +99,6 @@ const CanvasAnimation = () => {
         requestAnimationFrame(animate);
       }
     };
-
-    class Oscillator {
-      constructor({ phase = 0, offset = 0, frequency = 0.001, amplitude = 1 }) {
-        this.phase = phase;
-        this.offset = offset;
-        this.frequency = frequency;
-        this.amplitude = amplitude;
-        this.value = 0;
-      }
-
-      update() {
-        this.phase += this.frequency;
-        this.value = this.offset + Math.sin(this.phase) * this.amplitude;
-        return this.value;
-      }
-    }
 
     class Trail {
       constructor({ spring }) {
@@ -193,7 +182,13 @@ const CanvasAnimation = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} id="canvas"></canvas>;
+  return (
+    <canvas
+      ref={canvasRef}
+      id="canvas"
+      style={{ position: "absolute", zIndex: "1" }}
+    />
+  );
 };
 
 export default CanvasAnimation;

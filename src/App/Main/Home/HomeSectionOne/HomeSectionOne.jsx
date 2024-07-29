@@ -1,5 +1,6 @@
 import CanvasAnimation from "../../../Utility/CanvasAnimation";
 import { useAnim } from "../../../Context/AnimationContext";
+import StarBackgroundAnim from "../../../Utility/StarBackgroundAnim";
 
 function HomeSectionOne() {
   const { homeAnimationDelay, initialMount } = useAnim();
@@ -12,6 +13,16 @@ function HomeSectionOne() {
       >
         {/* This is only for get rid of canvas bug  */}
         {!homeAnimationDelay && <CanvasAnimation />}
+
+        <StarBackgroundAnim />
+        <div className="container">
+          <div className="primary-text-box">
+            <h1 style={initialMount ? { animation: "none" } : {}}>
+              We Create <br />
+              <span>Execptional</span> Digital <br /> Experiance
+            </h1>
+          </div>
+        </div>
       </div>
     </section>
   );

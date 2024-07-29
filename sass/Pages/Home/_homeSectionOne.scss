@@ -2,22 +2,22 @@
   width: 100%;
   height: 100vh;
 
-  @include center(flex);
-
   &__container {
     width: 100%;
     height: 100%;
-    background-color: black;
-    color: white;
 
+    color: white;
+    background-color: black;
     animation: homeSectionAnim 1.5s cubic-bezier(0.73, -0.03, 0.17, 0.99);
+
+    overflow: hidden;
   }
 }
 
 @keyframes homeSectionAnim {
   from {
     transform: scale(0) rotate(30deg);
-    border-radius: 12rem;
+    border-radius: 80%;
   }
   to {
     transform: scale(1) rotate(0deg);

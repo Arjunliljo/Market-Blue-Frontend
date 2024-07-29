@@ -7,8 +7,8 @@ function Home() {
   return (
     <Main>
       <HomeSectionOne></HomeSectionOne>
-      <HomeSectionTwo></HomeSectionTwo>
-      <HomeSectionThree></HomeSectionThree>
+      {/* <HomeSectionTwo></HomeSectionTwo> */}
+      {/* <HomeSectionThree></HomeSectionThree> */}
     </Main>
   );
 }

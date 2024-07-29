@@ -1,6 +1,5 @@
 import { createContext, useContext, useReducer, useState } from "react";
 import initialDelayTimer from "../HelperFuntions/InitialDelayTimer";
-import scroll from "../HelperFuntions/scroll";
 
 // Create the context
 const AnimationContext = createContext();
@@ -25,12 +24,9 @@ function reducer(state, action) {
 function AnimationProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { homeAnimationDelay, initialMount } = state;
-  const [scrolls, setScrolls] = useState(0)
 
-  initialDelayTimer(dispatch, 2000);
+  initialDelayTimer(dispatch, 5000);
 
-  scroll();
-  console.log(window.screenY);
   return (
     <AnimationContext.Provider
       value={{
