@@ -1,6 +1,8 @@
 import CanvasAnimation from "../../../Utility/CanvasAnimation";
 import { useAnim } from "../../../Context/AnimationContext";
 import StarBackgroundAnim from "../../../Utility/StarBackgroundAnim";
+import HomeBtn from "../../../Utility/HomeBtn";
+import PrimaryTextBox from "./PrimaryTextBox";
 
 function HomeSectionOne() {
   const { homeAnimationDelay, initialMount } = useAnim();
@@ -16,12 +18,7 @@ function HomeSectionOne() {
 
         <StarBackgroundAnim />
         <div className="container">
-          <div className="primary-text-box">
-            <h1 style={initialMount ? { animation: "none" } : {}}>
-              We Create <br />
-              <span>Execptional</span> Digital <br /> Experiance
-            </h1>
-          </div>
+          <PrimaryTextBox style={initialMount ? { animation: "none" } : {}} />
         </div>
       </div>
     </section>

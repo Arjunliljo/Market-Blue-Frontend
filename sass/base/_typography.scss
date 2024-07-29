@@ -2,18 +2,22 @@
   font-size: 1.8rem;
 }
 .primary-text-box {
-  @include center(flex);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
 
   position: absolute;
   top: 30%;
   font-size: 3rem;
   z-index: 2;
+  animation: homeContentAnim 3s ease forwards;
+  backface-visibility: hidden;
 }
 .primary-text-box h1 {
   font-size: 48px;
   font-weight: 100;
-  animation: homeContentAnim 3s ease forwards;
-  backface-visibility: hidden;
+  line-height: 6rem;
 }
 .primary-text-box h1 span {
   font-weight: 600;

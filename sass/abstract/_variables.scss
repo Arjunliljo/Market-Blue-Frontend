@@ -1,1 +1,9 @@
 $light-gray: rgb(238, 237, 233);
+$white-color: #fff;
+$primary-blue: #0000ff; // Updated to blue
+
+$font-regular: 400;
+$font-semi-bold: 600;
+
+$home-btn-shadow: 0 0 5px $primary-blue, 0 0 25px $primary-blue,
+  0 0 50px $primary-blue, 0 0 100px $primary-blue;
