@@ -12,11 +12,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "npm-run-all": "^4.1.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "sass": "^1.77.8",
+    "scrollmagic": "^2.0.8",
     "typeface-poppins": "^1.1.13",
     "typeface-roboto": "^1.1.13"
   },

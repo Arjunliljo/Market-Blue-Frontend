@@ -1,5 +1,5 @@
 .homeSectionOne {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   &__container {
@@ -9,9 +9,12 @@
     color: white;
     background-color: black;
     animation: homeSectionAnim 1.5s cubic-bezier(0.73, -0.03, 0.17, 0.99);
-
     overflow: hidden;
   }
+}
+.homeSectionOne .container {
+  position: relative;
+  height: 100%;
 }
 
 @keyframes homeSectionAnim {

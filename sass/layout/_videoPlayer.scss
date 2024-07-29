@@ -1,0 +1,9 @@
+.playerContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #2b2625;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}

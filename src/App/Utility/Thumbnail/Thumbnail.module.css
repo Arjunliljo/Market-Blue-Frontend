@@ -1,0 +1,21 @@
+.thumbnailContainer {
+  position: absolute;
+  right: 0;
+  bottom: 10rem;
+  background-color: black;
+  border: 2px solid blue;
+  z-index: 2;
+  width: 20rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(158, 158, 158);
+}
+
+.trigger {
+  height: 200vh; /* Make sure the page is scrollable */
+}
