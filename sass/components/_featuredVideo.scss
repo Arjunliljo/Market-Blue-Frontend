@@ -22,7 +22,7 @@
   height: 100%;
   width: 100%;
   background-image: url("../public/Videos/featutedVideoThumbnail.svg");
-  transition: all 1s;
+  transition: opacity 1s;
 }
 
 .videoContainer video {
