@@ -2,8 +2,25 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: #2b2625;
+  top: 0;
+  left: 0;
+  background-color: $mat-gray;
   z-index: 10;
-  opacity: 0;
-  visibility: hidden;
+}
+
+@keyframes playerAnimOn {
+  from {
+    transform: translateY(120vh) rotate(45deg);
+  }
+  to {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes playerAnimOff {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }

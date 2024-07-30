@@ -1,31 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
 import styles from "./Thumbnail.module.css";
+import useScrollParalax from "../../Hooks/scrollPralax";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsVideoOn } from "../../../Global/Events/eventSlice";
 
 function Thumbnail() {
-  const [style, setStyle] = useState({});
+  const [style] = useScrollParalax();
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const newWidth = 20 - scrollPosition * 0.05; // Adjust the multiplier for the desired effect
-      const newHeight = 10 - scrollPosition * 0.025; // Adjust the multiplier for the desired effect
-      const newBorderRadius = 2 + scrollPosition * 0.05; // Adjust the multiplier for the desired effect
-
-      setStyle({
-        width: `${newWidth}rem`,
-        height: `${newHeight}rem`,
-        borderRadius: `${newBorderRadius}rem`,
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const handleClick = () => {
+    dispatch(setIsVideoOn(true));
+  };
 
   return (
-    <a href="#">
-      <div className={styles.thumbnailContainer} style={style}></div>
-    </a>
+    <div
+      onClick={handleClick}
+      className={styles.thumbnailContainer}
+      style={style}
+    ></div>
   );
 }
 

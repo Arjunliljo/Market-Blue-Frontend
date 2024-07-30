@@ -11,6 +11,7 @@ import Service from "./App/Main/Service/Service.jsx";
 import { AnimationProvider } from "./App/Context/AnimationContext.jsx";
 import store from "./Global/store.js";
 import { Provider } from "react-redux";
+import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "services",
         element: <Service />,
+      },
+      {
+        path: "player",
+        element: <VideoPlayer />,
       },
     ],
   },

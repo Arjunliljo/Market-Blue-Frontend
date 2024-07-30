@@ -1,6 +1,6 @@
 .videoContainer {
-  width: 100%;
-  height: 100%;
+  @include fillArea;
+
   // background-color: $primary-blue;
   @include center(flex);
   object-fit: cover;
@@ -8,27 +8,28 @@
 
   &__placeholder {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: black;
+
+    @include fillArea;
+
+    background-color: $dark-blue;
     transform-origin: left;
     animation: featuredVideoPlaceholder 1s ease forwards;
   }
 }
 .placeholder {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-image: url("../public/Videos/featutedVideoThumbnail.svg");
+
+  @include absolute;
+  @include fillArea;
+
+  background-image: url("../Videos/featutedVideoThumbnail.svg");
   transition: opacity 1s;
 }
 
 .videoContainer video {
   object-fit: cover;
-  height: 100%;
-  width: 100%; /* Maintain aspect ratio */
+
+  @include fillArea;
 }
 
 @keyframes featuredVideoPlaceholder {

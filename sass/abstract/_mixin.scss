@@ -42,3 +42,14 @@
 @mixin viewPortArea() {
   height: 100vh;
 }
+
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin fillArea() {
+  width: 100%;
+  height: 100%;
+}
