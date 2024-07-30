@@ -5,10 +5,12 @@ function FeaturedVideo({ path, style }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [delay, setDelay] = useState(true);
 
+  const placeholder = !videoLoaded || delay;
+
   useEffect(() => {
     const delayTimer = setTimeout(() => {
       setDelay(false);
-    }, 1000);
+    }, 3000);
 
     return () => clearTimeout(delayTimer);
   }, []);
@@ -30,13 +32,10 @@ function FeaturedVideo({ path, style }) {
         Your browser does not support the video tag.
       </video>
 
-      <div className="videoContainer__placeholder"></div>
-      {(!videoLoaded || delay) && (
-        <Image
-          src="Videos/featutedVideoThumbnail.svg"
-          style={{ position: "absolute", top: "0", left: "0" }}
-        />
-      )}
+      <div
+        className="placeholder"
+        style={placeholder ? { opacity: 1 } : { opacity: 0 }}
+      ></div>
     </div>
   );
 }

@@ -12,13 +12,13 @@ body {
   font-size: 1.6rem;
   overflow-x: hidden;
   color: white;
-  background-color: red;
+  background-color: rgb(1, 1, 39);
 }
 .app {
   background-color: $light-gray;
   width: 100vw;
-  background-color: lightblue;
   position: relative;
+  background-color: rgb(1, 1, 39);
 }
 .main {
   position: relative;

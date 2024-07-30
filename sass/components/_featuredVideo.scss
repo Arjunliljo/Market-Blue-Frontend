@@ -1,7 +1,7 @@
 .videoContainer {
   width: 100%;
   height: 100%;
-  background-color: $primary-blue;
+  // background-color: $primary-blue;
   @include center(flex);
   object-fit: cover;
   position: relative;
@@ -14,6 +14,15 @@
     transform-origin: left;
     animation: featuredVideoPlaceholder 1s ease forwards;
   }
+}
+.placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../public/Videos/featutedVideoThumbnail.svg");
+  transition: all 1s;
 }
 
 .videoContainer video {

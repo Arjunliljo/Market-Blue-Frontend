@@ -66,7 +66,10 @@ function Slider({
 
         <div
           className={styles.slider}
-          style={{ animation: "sliderAnim 1s ease forwards", width: shoWidth }}
+          style={{
+            animation: "sliderAnim 1.5s ease-in-out forwards",
+            width: shoWidth,
+          }}
         >
           <div
             className={styles.row}
