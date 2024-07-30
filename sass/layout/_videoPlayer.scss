@@ -18,12 +18,12 @@
 
 .player_video-box {
   width: 60%;
-  animation: playerVideo 1s cubic-bezier(1, 0.01, 0.26, 1.01) forwards;
+  animation: playerVideo 1s ease-in forwards;
 }
 
 @keyframes playerVideo {
   from {
-    transform: scale(0) rotate(-30deg);
+    transform: scale(0) rotate(-50deg);
   }
   to {
     transform: scale(1) rotate(0deg);
@@ -32,7 +32,7 @@
 
 @keyframes playerAnimOn {
   from {
-    transform: translateY(120vh) rotate(45deg);
+    transform: translateY(200vh) rotate(45deg);
   }
   to {
     transform: translateY(0px) rotate(0deg);

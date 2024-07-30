@@ -12,6 +12,7 @@ import { AnimationProvider } from "./App/Context/AnimationContext.jsx";
 import store from "./Global/store.js";
 import { Provider } from "react-redux";
 import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer.jsx";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <AnimationProvider>
-        <RouterProvider router={router} />
+        <ParallaxProvider>
+          <RouterProvider router={router} />
+        </ParallaxProvider>
       </AnimationProvider>
     </Provider>
   </React.StrictMode>
