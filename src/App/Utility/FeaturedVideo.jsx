@@ -4,9 +4,8 @@ function FeaturedVideo({ path, style }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   const handleLoad = () => {
-    console.log("loaded");
+    setVideoLoaded(true);
   };
-
   return (
     <div className="videoContainer" style={style}>
       <video
@@ -19,6 +18,8 @@ function FeaturedVideo({ path, style }) {
       >
         Your browser does not support the video tag.
       </video>
+
+      <div className="videoContainer__placeholder"></div>
     </div>
   );
 }

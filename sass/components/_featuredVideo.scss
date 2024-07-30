@@ -4,10 +4,29 @@
   background-color: $primary-blue;
   @include center(flex);
   object-fit: cover;
+  position: relative;
+
+  &__placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: left;
+    animation: featuredVideoPlaceholder 1s ease forwards;
+  }
 }
 
 .videoContainer video {
   object-fit: cover;
   height: 100%;
   width: 100%; /* Maintain aspect ratio */
+}
+
+@keyframes featuredVideoPlaceholder {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
 }
