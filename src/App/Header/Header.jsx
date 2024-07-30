@@ -3,17 +3,26 @@ import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
 
 function Header() {
-  const { isSectionTwo } = useSelector((state) => state.events);
+  const { isSectionOne, isSectionTwo } = useSelector((state) => state.events);
+
+  const fixed = !isSectionOne && !isSectionTwo;
+
+  const fixedStyle = {
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+    position: "fixed",
+    backgroundColor: "white",
+    color: "black",
+    animation: "headerFixedAnim .5s ease forwards",
+  };
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={fixed ? fixedStyle : { position: "absolute" }}
+    >
       <div className="container">
-        {!isSectionTwo && (
-          <>
-            <HeaderLogo />
-            <HeaderNav />
-          </>
-        )}
+        <HeaderLogo />
+        <HeaderNav />
       </div>
     </header>
   );

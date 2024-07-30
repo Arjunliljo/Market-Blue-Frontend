@@ -3,7 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   isVideoOn: false,
   isClickedThumbnail: false,
+  isSectionOne: false,
   isSectionTwo: false,
+  isHeader: false,
 };
 
 export const eventSlice = createSlice({
@@ -19,9 +21,20 @@ export const eventSlice = createSlice({
     setIsSectionTwo: (state, action) => {
       state.isSectionTwo = action.payload;
     },
+    setIsSectionOne: (state, action) => {
+      state.isSectionOne = action.payload;
+    },
+    setIsHeader: (state, action) => {
+      state.isHeader = action.payload;
+    },
   },
 });
 
-export const { setIsVideoOn, setIsClickedThumbnail, setIsSectionTwo } =
-  eventSlice.actions;
+export const {
+  setIsVideoOn,
+  setIsClickedThumbnail,
+  setIsSectionOne,
+  setIsSectionTwo,
+  setIsHeader,
+} = eventSlice.actions;
 export default eventSlice.reducer;

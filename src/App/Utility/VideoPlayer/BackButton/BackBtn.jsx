@@ -2,8 +2,8 @@ import "./BackBtn.css";
 
 function BackBtn() {
   return (
-    <button type="button" class="custom-button">
-      <div class="custom-icon">
+    <button type="button" className="custom-button">
+      <div className="custom-icon">
         <svg
           width="25px"
           height="25px"
@@ -20,7 +20,7 @@ function BackBtn() {
           ></path>
         </svg>
       </div>
-      <p class="custom-text">Go Back</p>
+      <p className="custom-text">Go Back</p>
     </button>
   );
 }
