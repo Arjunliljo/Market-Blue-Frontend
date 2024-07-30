@@ -15,13 +15,15 @@ function VideoPlayer() {
       className="playerContainer"
       style={
         isVideoOn
-          ? { animation: "playerAnimOn 1s ease forwards" }
+          ? { animation: "playerAnimOn .8s ease forwards" }
           : {
               animation: "playerAnimOff .5s ease forwards",
             }
       }
     >
-      <button onClick={handleClick}>Back</button>
+      <button className="playerBtn" onClick={handleClick}>
+        Back
+      </button>
       <div>VideoPlayer</div>
     </div>
   );

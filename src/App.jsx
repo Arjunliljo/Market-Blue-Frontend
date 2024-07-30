@@ -5,10 +5,10 @@ import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer";
 import { useSelector } from "react-redux";
 
 function App() {
-  const { isVideoOn } = useSelector((state) => state.events);
+  const { isClickedThumbnail } = useSelector((state) => state.events);
   return (
     <>
-      <VideoPlayer />
+      {isClickedThumbnail && <VideoPlayer />}
       <div className="app">
         <Header />
         <Outlet />

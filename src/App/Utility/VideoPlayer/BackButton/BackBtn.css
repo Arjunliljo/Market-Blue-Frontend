@@ -1,0 +1,42 @@
+.custom-button {
+  background-color: white;
+  text-align: center;
+  width: 12rem;
+  height: 3.5rem;
+  position: relative;
+  font-family: sans-serif;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-button .custom-icon {
+  background-color: #38a169; /* green-400 */
+  border-radius: 0.75rem; /* rounded-xl */
+  height: 3rem;
+  width: 25%; /* w-1/4 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem; /* top-[4px] */
+  z-index: 10;
+  transition: width 0.5s ease;
+}
+
+.custom-button:hover .custom-icon {
+  width: 11.5rem; /* w-[184px] */
+}
+
+.custom-button .custom-text {
+  transform: translateX(0.5rem); /* translate-x-2 */
+}

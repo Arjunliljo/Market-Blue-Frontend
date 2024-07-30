@@ -8,12 +8,16 @@
   z-index: 10;
 }
 
+.playerBtn {
+}
+
 @keyframes playerAnimOn {
   from {
     transform: translateY(120vh) rotate(45deg);
   }
   to {
     transform: translateY(0px) rotate(0deg);
+    visibility: visible;
   }
 }
 @keyframes playerAnimOff {
@@ -22,5 +26,6 @@
   }
   to {
     transform: scale(0);
+    visibility: hidden;
   }
 }

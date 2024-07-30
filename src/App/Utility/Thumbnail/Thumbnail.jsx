@@ -1,7 +1,10 @@
 import styles from "./Thumbnail.module.css";
 import useScrollParalax from "../../Hooks/scrollPralax";
 import { useDispatch, useSelector } from "react-redux";
-import { setIsVideoOn } from "../../../Global/Events/eventSlice";
+import {
+  setIsClickedThumbnail,
+  setIsVideoOn,
+} from "../../../Global/Events/eventSlice";
 
 function Thumbnail() {
   const [style] = useScrollParalax();
@@ -9,6 +12,7 @@ function Thumbnail() {
 
   const handleClick = () => {
     dispatch(setIsVideoOn(true));
+    dispatch(setIsClickedThumbnail(true));
   };
 
   return (
