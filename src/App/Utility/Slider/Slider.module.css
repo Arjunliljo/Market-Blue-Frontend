@@ -4,7 +4,6 @@
   justify-content: center;
   gap: 2rem;
   transition: all 1s cubic-bezier(0.66, 0.44, 0.57, 1.58);
-  background-color: yellow;
   position: relative;
 }
 
@@ -12,6 +11,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+  background-color: black;
 }
 .row {
   display: flex;
@@ -21,7 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0;
 }
 .btn {
   cursor: pointer;

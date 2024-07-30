@@ -1,0 +1,10 @@
+@keyframes sliderAnim {
+  from {
+    transform: scale(0.5);
+    border-radius: 50%;
+  }
+  to {
+    transform: scale(1);
+    border-radius: 10rem;
+  }
+}

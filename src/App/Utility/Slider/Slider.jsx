@@ -62,9 +62,12 @@ function Slider({
         style={sliderStyle}
         aria-label="Image Slider"
       >
-        {!auto && <SliderButton onClick={handleBack} type="backward" />}
+        {/* {!auto && <SliderButton onClick={handleBack} type="backward" />} */}
 
-        <div className={styles.slider} style={{ width: shoWidth }}>
+        <div
+          className={styles.slider}
+          style={{ animation: "sliderAnim 1s ease forwards", width: shoWidth }}
+        >
           <div
             className={styles.row}
             style={{ gap, transform: `translateX(-${translate}px)` }}
@@ -82,7 +85,7 @@ function Slider({
           </div>
         </div>
 
-        {!auto && <SliderButton onClick={handleFront} type="forward" />}
+        {/* {!auto && <SliderButton onClick={handleFront} type="forward" />} */}
       </div>
     </>
   );

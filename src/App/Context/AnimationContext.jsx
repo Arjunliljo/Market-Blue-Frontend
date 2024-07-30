@@ -1,5 +1,13 @@
-import { createContext, useContext, useReducer, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import initialDelayTimer from "../HelperFuntions/InitialDelayTimer";
+import { useDispatch } from "react-redux";
+import { setInitialMount } from "../../Global/TimingSlice/timingSlice";
 
 // Create the context
 const AnimationContext = createContext();
@@ -25,12 +33,19 @@ function AnimationProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { homeAnimationDelay, initialMount } = state;
 
-  initialDelayTimer(dispatch, 5000);
+  const reduxDispatch = useDispatch();
+
+  useEffect(() => {
+    const initialTiming = setTimeout(() => {
+      reduxDispatch(setInitialMount(true));
+    }, 2500);
+
+    return () => clearTimeout(initialTiming);
+  }, []);
 
   return (
     <AnimationContext.Provider
       value={{
-        homeAnimationDelay,
         initialMount,
       }}
     >

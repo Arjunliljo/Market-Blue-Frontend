@@ -3,9 +3,11 @@ import { useAnim } from "../../../Context/AnimationContext";
 import StarBackgroundAnim from "../../../Utility/StarBackgroundAnim";
 import PrimaryTextBox from "./PrimaryTextBox";
 import Thumbnail from "../../../Utility/Thumbnail/Thumbnail";
+import { useSelector } from "react-redux";
 
 function HomeSectionOne() {
-  const { homeAnimationDelay, initialMount } = useAnim();
+  // const { homeAnimationDelay, initialMount } = useAnim();
+  const initialMount = useSelector((state) => state.timing.initialMount);
   return (
     <section className="homeSectionOne">
       <div
@@ -14,9 +16,9 @@ function HomeSectionOne() {
         style={initialMount ? { animation: "none" } : {}}
       >
         {/* This is only for get rid of canvas bug  */}
-        {!homeAnimationDelay && <CanvasAnimation />}
+        {initialMount && <CanvasAnimation />}
 
-        <StarBackgroundAnim />
+        <StarBackgroundAnim style={{ height: "200%" }} />
         <div className="container">
           <PrimaryTextBox style={initialMount ? { animation: "none" } : {}} />
 

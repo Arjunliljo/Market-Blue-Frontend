@@ -1,14 +1,13 @@
 .videoContainer {
-  width: 100vw !important;
-  height: 100vh;
-  background-color: green;
-
+  width: 100%;
+  height: 100%;
+  background-color: $primary-blue;
   @include center(flex);
   object-fit: cover;
 }
 
 .videoContainer video {
   object-fit: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%; /* Maintain aspect ratio */
 }

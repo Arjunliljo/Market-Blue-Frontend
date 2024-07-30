@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Thumbnail.module.css";
 
 function Thumbnail() {
-  const thumbnailRef = useRef(null);
   const [style, setStyle] = useState({});
 
   useEffect(() => {
@@ -25,11 +24,7 @@ function Thumbnail() {
 
   return (
     <a href="#">
-      <div
-        ref={thumbnailRef}
-        className={styles.thumbnailContainer}
-        style={style}
-      ></div>
+      <div className={styles.thumbnailContainer} style={style}></div>
     </a>
   );
 }

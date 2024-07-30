@@ -11,5 +11,40 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="./script.js"></script>
+
+    <script>
+      let scrollAmount = 0;
+      let isScrolling = false;
+
+      function smoothScroll(delta) {
+        scrollAmount += delta;
+
+        if (!isScrolling) {
+          isScrolling = true;
+          requestAnimationFrame(smoothStep);
+        }
+      }
+
+      function smoothStep() {
+        if (Math.abs(scrollAmount) > 1) {
+          window.scrollBy(0, scrollAmount * 0.2); // Adjust the multiplier for smoothness
+          scrollAmount *= 0.9; // Adjust the damping factor for the smoothness effect
+          requestAnimationFrame(smoothStep);
+        } else {
+          scrollAmount = 0;
+          isScrolling = false;
+        }
+      }
+
+      window.addEventListener(
+        "wheel",
+        (event) => {
+          event.preventDefault();
+          smoothScroll(event.deltaY);
+        },
+        { passive: false }
+      );
+    </script>
   </body>
 </html>
