@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Image from "../Utility/Image/Image";
 
-function FeaturedVideo({ path, style }) {
+function FeaturedVideo({ path, style, thumbnail }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [delay, setDelay] = useState(true);
 
@@ -10,7 +9,7 @@ function FeaturedVideo({ path, style }) {
   useEffect(() => {
     const delayTimer = setTimeout(() => {
       setDelay(false);
-    }, 3000);
+    }, 2000);
 
     return () => clearTimeout(delayTimer);
   }, []);

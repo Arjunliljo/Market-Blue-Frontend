@@ -6,9 +6,28 @@
   left: 0;
   background-color: $mat-gray;
   z-index: 10;
+
+  @include center(flex);
 }
 
-.playerBtn {
+.playerBtnContainer {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+
+.player_video-box {
+  width: 60%;
+  animation: playerVideo 1s cubic-bezier(1, 0.01, 0.26, 1.01) forwards;
+}
+
+@keyframes playerVideo {
+  from {
+    transform: scale(0) rotate(-30deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 @keyframes playerAnimOn {

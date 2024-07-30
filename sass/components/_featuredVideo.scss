@@ -23,6 +23,7 @@
   @include fillArea;
 
   background-image: url("../Videos/featutedVideoThumbnail.svg");
+  background-size: 100%;
   transition: opacity 1s;
 }
 

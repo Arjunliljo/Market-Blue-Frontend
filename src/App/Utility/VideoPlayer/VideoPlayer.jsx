@@ -1,5 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setIsVideoOn } from "../../../Global/Events/eventSlice";
+import BackBtn from "./BackButton/BackBtn";
+import FeaturedVideo from "../FeaturedVideo";
 
 function VideoPlayer() {
   const { isVideoOn } = useSelector((state) => state.events);
@@ -21,10 +23,15 @@ function VideoPlayer() {
             }
       }
     >
-      <button className="playerBtn" onClick={handleClick}>
-        Back
-      </button>
-      <div>VideoPlayer</div>
+      <div className="playerBtnContainer" onClick={handleClick}>
+        <BackBtn />
+      </div>
+
+      {isVideoOn && (
+        <div className="player_video-box">
+          <FeaturedVideo path="/Videos/FeaturedVideoOne.mov" />
+        </div>
+      )}
     </div>
   );
 }
