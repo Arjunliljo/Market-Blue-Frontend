@@ -8,8 +8,10 @@ function HomeSectionThree() {
         <div className="parallax">
           <ParallaxContent />
         </div>
-        <div className="logo-swiper">
-          <SlidingLogos />
+        <div className="container">
+          <div className="logo-swiper">
+            <SlidingLogos />
+          </div>
         </div>
       </div>
     </section>
