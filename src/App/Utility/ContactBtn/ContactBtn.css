@@ -1,0 +1,47 @@
+.contactBtn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-align: center;
+  padding: 0.7em 1.2em;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: rgb(1, 1, 46);
+
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+
+.contactBtn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #0000ff;
+  z-index: -1;
+  border-radius: 1.4rem;
+}
+
+.contactBtn:hover,
+.contactBtn:focus {
+  color: white;
+}
+
+.contactBtn:hover:before,
+.contactBtn:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.contactBtn:active {
+  transform: scale(0.9);
+}

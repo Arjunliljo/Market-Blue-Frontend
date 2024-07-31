@@ -1,3 +1,45 @@
 .homeSectionThree {
-  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 300vh;
+  color: black;
+  position: relative;
+  background-color: rgb(182, 182, 182);
+}
+.parallax {
+  background-image: url("../images/SectionThreeBg.svg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  height: 30rem;
+  @include center(flex);
+  position: relative;
+}
+.homeSectionThree__container .parallax-inner .container {
+  @include center(flex);
+  gap: 3rem;
+  justify-content: space-between;
+  height: 100%;
+}
+.parallax-inner {
+  background-color: rgba(5, 0, 29, 0.8);
+  @include fillArea;
+  color: white;
+
+  &__text {
+    @include center(flex);
+    flex-direction: column;
+    max-width: 50rem;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+}
+
+.parallax-inner h2 {
+  color: white;
+  mix-blend-mode: normal;
+}
+.parallax-inner h3 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
 }

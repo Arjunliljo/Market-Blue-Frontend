@@ -1,0 +1,22 @@
+.logo-box .container {
+  overflow: hidden;
+  background-color: white;
+  padding: 6rem 0;
+  display: flex;
+}
+.logo-slide {
+  display: flex;
+  animation: 5s sliding linear infinite;
+}
+.logo-slide > * {
+  margin: 0 3rem;
+  flex-shrink: 0;
+}
+@keyframes sliding {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
