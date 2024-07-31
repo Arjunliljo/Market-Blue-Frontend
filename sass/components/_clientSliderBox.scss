@@ -6,48 +6,51 @@
   overflow: hidden;
   pointer-events: none;
 
-  // Intense smoke effect on the left
   &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 40%; // Adjust the width as needed
+    width: 20%;
     height: 100%;
     background: linear-gradient(
       to right,
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0)
     );
-    z-index: 1; // Ensure it overlays the swiper content
+    z-index: 1;
   }
 
-  // Intense smoke effect on the right
   &::after {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 40%; // Adjust the width as needed
+    width: 20%;
     height: 100%;
     background: linear-gradient(
       to left,
       rgba(255, 255, 255, 1),
       rgba(255, 255, 255, 0)
     );
-    z-index: 1; // Ensure it overlays the swiper content
+    z-index: 1;
   }
+}
+
+body {
+  background: #f8f8ff;
 }
 
 .logo-slider {
   overflow: hidden;
+  padding: 30px 0 0 0;
   white-space: nowrap;
   position: relative;
 }
 
-// .logo-slider:hover .logos-slide {
-//   animation-play-state: paused;
-// }
+.logo-slider:hover .logos-slide {
+  animation-play-state: paused;
+}
 
 .logos-slide {
   display: inline-block;
@@ -55,8 +58,9 @@
 }
 
 .logos-slide img {
-  width: 180px;
-  height: 180px;
+  width: 183px;
+  height: 83px;
+  margin: 0 20px;
 }
 
 @keyframes slide {
