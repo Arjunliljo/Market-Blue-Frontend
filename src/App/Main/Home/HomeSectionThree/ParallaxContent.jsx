@@ -1,5 +1,5 @@
 import ContactBtn from "../../../Utility/ContactBtn/ContactBtn";
-import HomeBtn from "../../../Utility/HomeBtn";
+
 function ParallaxContent() {
   return (
     <div className="parallax-inner">
