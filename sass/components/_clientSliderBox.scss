@@ -2,10 +2,45 @@
   background-color: white;
   height: 20rem;
   @include center(flex);
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+
+  // Intense smoke effect on the left
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; // Adjust the width as needed
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 1; // Ensure it overlays the swiper content
+  }
+
+  // Intense smoke effect on the right
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; // Adjust the width as needed
+    height: 100%;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 1; // Ensure it overlays the swiper content
+  }
 }
+
 .logo-slider {
   overflow: hidden;
-  padding: 30px 0 0 0;
   white-space: nowrap;
   position: relative;
 }
@@ -16,13 +51,12 @@
 
 .logos-slide {
   display: inline-block;
-  animation: 5s slide infinite linear;
+  animation: 10s slide infinite linear;
 }
 
 .logos-slide img {
-  width: 183px;
-  height: 83px;
-  margin: 0 40px;
+  width: 180px;
+  height: 180px;
 }
 
 @keyframes slide {
