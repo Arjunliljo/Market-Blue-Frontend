@@ -9,13 +9,15 @@
 @import "./layout/header";
 @import "./layout/videoPlayer";
 
+@import "./components/button";
+@import "./components/starBackgroundAnim";
+@import "./components/featuredVideo";
+@import "./components/homeBtn";
+@import "./components/clientSliderBox";
+@import "./components/expertise";
+
 @import "./Pages/Home/homeSectionOne";
 @import "./Pages/Home/homeSectionTwo";
 @import "./Pages/Home/homeSectionThree";
 @import "./Pages/Home/homeSectionFour";
 @import "./Pages/Home/homeSectionFIve";
-
-@import "./components/starBackgroundAnim";
-@import "./components/featuredVideo";
-@import "./components/homeBtn";
-@import "./components/clientSliderBox";

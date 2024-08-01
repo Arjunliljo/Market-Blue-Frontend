@@ -1,0 +1,36 @@
+.expertise {
+  width: 50%;
+  position: absolute;
+  &__container {
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  &__captions-box {
+    transition: opacity 0.5s;
+    margin: 3rem;
+  }
+  &__container:hover .imageContainer {
+    transform: scale(1.1);
+  }
+  &__container:hover .learn-more {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+.expertise .learn-more {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.5s;
+}
+.imageContainer {
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+.imageContainer:hover {
+  transform: scale(1.1);
+}
