@@ -14,11 +14,14 @@ function HomeSectionTwo() {
 
   return (
     <section ref={targetRef} className="homeSectionTwo">
-      {oneTimeObeserver && (
-        <Slider items={1} childWidth={`${1200}px`} gap="0px">
-          <FeaturedVideo path="/Videos/FeaturedVideoOne.mov" />
-        </Slider>
-      )}
+      <Slider
+        items={1}
+        childWidth={`${1200}px`}
+        gap="0px"
+        isRender={oneTimeObeserver}
+      >
+        <FeaturedVideo path="/Videos/FeaturedVideoOne.mov" />
+      </Slider>
     </section>
   );
 }

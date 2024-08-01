@@ -1,4 +1,18 @@
 .homeSectionFour {
   width: 100vw;
-  height: 300vh;
+  height: 200vh;
+  background-color: white;
+  color: $text-gray;
+}
+.homeSectionFour .container {
+  padding-top: 10rem;
+  &__span {
+    color: $primary-blue;
+  }
+  &__title {
+    margin: 0px;
+  }
+  &__text {
+    width: 80%;
+  }
 }

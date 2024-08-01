@@ -10,6 +10,7 @@ function Slider({
   sliderStyle,
   auto = false,
   pause = false,
+  isRender,
 }) {
   const [isHover, setIsHover] = useState(false);
 
@@ -66,10 +67,15 @@ function Slider({
 
         <div
           className={styles.slider}
-          style={{
-            animation: "sliderAnim 1.5s ease-in-out forwards",
-            width: shoWidth,
-          }}
+          style={
+            isRender
+              ? {
+                  animation: "sliderAnim 1.5s ease-in-out forwards",
+                  opacity: "1",
+                  width: shoWidth,
+                }
+              : { opacity: "0" }
+          }
         >
           <div
             className={styles.row}

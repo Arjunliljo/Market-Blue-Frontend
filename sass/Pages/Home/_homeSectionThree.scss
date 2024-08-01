@@ -1,9 +1,9 @@
 .homeSectionThree {
   width: 100vw;
-  height: 300vh;
   color: black;
   position: relative;
   background-color: $white-color;
+  height: fit-content;
 }
 .parallax {
   background-image: url("../images/SectionThreeBg.svg");

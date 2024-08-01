@@ -1,4 +1,3 @@
-import { Parallax } from "react-scroll-parallax";
 import ParallaxContent from "./ParallaxContent";
 import SlidingLogos from "./SlidingLogos";
 
@@ -11,11 +10,9 @@ function HomeSectionThree() {
             <SlidingLogos />
           </div>
         </div>
-        <Parallax speed={10}>
-          <div className="parallax">
-            <ParallaxContent />
-          </div>
-        </Parallax>
+        <div className="parallax">
+          <ParallaxContent />
+        </div>
       </div>
     </section>
   );
