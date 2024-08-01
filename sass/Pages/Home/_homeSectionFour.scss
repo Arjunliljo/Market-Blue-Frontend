@@ -22,3 +22,12 @@
     width: 80%;
   }
 }
+.about-section-img-box {
+  margin-top: 5rem;
+  @include grid("2-col", 3rem);
+}
+.about-section-img-container {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 30px rgba(0, 0, 0, 0.2);
+}
