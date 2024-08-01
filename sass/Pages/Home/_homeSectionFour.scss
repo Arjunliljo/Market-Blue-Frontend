@@ -3,16 +3,22 @@
   height: 200vh;
   background-color: white;
   color: $text-gray;
+  transition: all 1s;
 }
+
 .homeSectionFour .container {
-  padding-top: 10rem;
+  padding-top: 5rem;
+  transition: all 1s;
   &__span {
+    transition: all 1s;
     color: $primary-blue;
   }
   &__title {
-    margin: 0px;
+    transition: all 1s;
+    margin-bottom: 2rem;
   }
   &__text {
+    transition: all 1s;
     width: 80%;
   }
 }

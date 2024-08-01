@@ -5,6 +5,7 @@ const initialState = {
   isClickedThumbnail: false,
   isSectionOne: false,
   isSectionTwo: false,
+  isSectionFour: false,
   isHeader: false,
 };
 
@@ -24,6 +25,9 @@ export const eventSlice = createSlice({
     setIsSectionOne: (state, action) => {
       state.isSectionOne = action.payload;
     },
+    setIsSectionFour: (state, action) => {
+      state.isSectionFour = action.payload;
+    },
     setIsHeader: (state, action) => {
       state.isHeader = action.payload;
     },
@@ -35,6 +39,7 @@ export const {
   setIsClickedThumbnail,
   setIsSectionOne,
   setIsSectionTwo,
+  setIsSectionFour,
   setIsHeader,
 } = eventSlice.actions;
 export default eventSlice.reducer;

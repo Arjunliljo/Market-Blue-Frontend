@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-function useObserver(targetRef, setIsSection) {
+function useObserver(targetRef, setIsSection, hold) {
   const dispatch = useDispatch();
+
+  const threshold = hold ? hold : 0.1;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -14,7 +16,7 @@ function useObserver(targetRef, setIsSection) {
           dispatch(setIsSection(false));
         }
       },
-      { threshold: 0.1, root: null }
+      { threshold, root: null }
     );
 
     const target = targetRef.current;
