@@ -1,4 +1,6 @@
+import { Parallax } from "react-scroll-parallax";
 import Expertise from "./Expertise";
+import { useSelector } from "react-redux";
 
 function HomeSectionFive() {
   const arr = [];
@@ -16,16 +18,24 @@ function HomeSectionFive() {
       j++;
     }
   }
-  return (
-    <section className="homeSectionFive">
-      <div className="container">
-        <span className="section-about-title">Experts in</span>
-        <h2 className="section-title">Crafting Concepts</h2>
 
-        {arr.map((style, i) => (
-          <Expertise style={style} key={i} id={i} />
-        ))}
-      </div>
+  const { isSectionSix } = useSelector((state) => state.events);
+
+  return (
+    <section
+      className="homeSectionFive"
+      style={isSectionSix ? { backgroundColor: "#202020" } : {}}
+    >
+      <Parallax speed={20}>
+        <div className="container">
+          <span className="section-about-title">Experts in</span>
+          <h2 className="section-title">Crafting Concepts</h2>
+
+          {arr.map((style, i) => (
+            <Expertise style={style} key={i} id={i} />
+          ))}
+        </div>
+      </Parallax>
     </section>
   );
 }

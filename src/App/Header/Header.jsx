@@ -3,15 +3,17 @@ import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
 
 function Header() {
-  const { isSectionOne, isSectionTwo } = useSelector((state) => state.events);
+  const { isSectionOne, isSectionTwo, isSectionSix } = useSelector(
+    (state) => state.events
+  );
 
   const fixed = !isSectionOne && !isSectionTwo;
 
   const fixedStyle = {
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
     position: "fixed",
-    backgroundColor: "white",
-    color: "black",
+    backgroundColor: isSectionSix ? "#202020" : "white",
+    color: isSectionSix ? "rgb(197, 197, 197)" : "black",
     animation: "headerFixedAnim .5s ease forwards",
   };
 

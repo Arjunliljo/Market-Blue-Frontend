@@ -1,0 +1,53 @@
+.homeSectionSix {
+  width: 100vw;
+  height: 100vh;
+  background-color: $mat-gray;
+  background-image: radial-gradient(circle, #00008b83 1%, $mat-gray 40%);
+
+  text-align: center;
+  flex-direction: column;
+  padding: 8rem;
+  &-span {
+    color: $light-blue;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 0.4rem;
+  }
+}
+.homeSectionSix h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: $mid-gray;
+  width: 70rem;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+.globecontainer {
+  @include center("center");
+  width: 35rem;
+  height: 35rem;
+  border-radius: 50%;
+  z-index: 0;
+  overflow: hidden;
+  background-image: url("../images/social-one_blurr.svg");
+  background-size: 120%;
+  background-position: center;
+  border: 0.08px solid rgba(189, 188, 188, 0.185);
+  box-shadow: 0 0 20px 10px rgba(1, 1, 68, 0.5);
+
+  @include center(flex);
+}
+.logoContainer {
+  width: 10rem;
+  height: 10rem;
+  animation: logoRotate 8s linear infinite forwards;
+}
+
+@keyframes logoRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

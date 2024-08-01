@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import fetchData from "../../../HelperFuntions/fetchData";
 import Image from "../../../Utility/Image/Image";
+
 fetchData;
 
 function Expertise({ style, id }) {
@@ -17,12 +18,14 @@ function Expertise({ style, id }) {
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.3,
       }
     );
     if (targetRef.current) observer.observe(targetRef.current);
 
-    return () => observer.unobserve(targetRef.current);
+    return () => {
+      if (targetRef.current) observer.unobserve(targetRef.current);
+    };
   }, []);
 
   return (
