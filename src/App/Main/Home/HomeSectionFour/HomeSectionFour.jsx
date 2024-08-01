@@ -8,12 +8,13 @@ import AboutImages from "./AboutImages";
 
 function HomeSectionFour() {
   const targetRef = useRef(null);
-  useObserver(targetRef, setIsSectionFour, 0.5);
+  // useObserver(targetRef, setIsSectionFour, 0.8);
 
   return (
     <section ref={targetRef} className="homeSectionFour">
       <div className="container">
-        <AboutText />
+        <AboutText t2="Thinkers. Doers. Agents of change. A full-service digital marketing agency with passion for ingenuity and innovation in every medium, focused on the user experience." />
+
         <AboutImages />
       </div>
     </section>

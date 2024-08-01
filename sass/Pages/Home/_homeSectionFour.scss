@@ -1,21 +1,16 @@
 .homeSectionFour {
   width: 100vw;
-  height: 200vh;
-  background-color: white;
-  color: $text-gray;
+  height: fit-content;
+  background-color: $white-color;
   transition: all 1s;
 }
 
 .homeSectionFour .container {
   padding-top: 5rem;
   transition: all 1s;
-  &__span {
-    transition: all 1s;
-    color: $primary-blue;
-  }
+
   &__title {
     transition: all 1s;
-    margin-bottom: 2rem;
   }
   &__text {
     transition: all 1s;

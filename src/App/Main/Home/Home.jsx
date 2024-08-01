@@ -1,4 +1,5 @@
 import Main from "../Main";
+import HomeSectionFive from "./HomeSectionFIve/HomeSectionFive";
 import HomeSectionFour from "./HomeSectionFour/HomeSectionFour";
 import HomeSectionOne from "./HomeSectionOne/HomeSectionOne";
 import HomeSectionThree from "./HomeSectionThree/HomeSectionThree";
@@ -12,6 +13,7 @@ function Home() {
       {/* fitContent height */}
       <HomeSectionThree />
       <HomeSectionFour />
+      <HomeSectionFive />
     </Main>
   );
 }
