@@ -1,4 +1,3 @@
-import { Parallax } from "react-scroll-parallax";
 import LeftSideTextBox from "./LeftSideTextBox";
 import RightSideTextBox from "./RightSideTextBox";
 
