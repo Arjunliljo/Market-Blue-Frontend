@@ -5,11 +5,16 @@ import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer";
 import { useSelector } from "react-redux";
 
 function App() {
-  const { isClickedThumbnail } = useSelector((state) => state.events);
+  const { isClickedThumbnail, isSectionSix } = useSelector(
+    (state) => state.events
+  );
   return (
     <>
       {isClickedThumbnail && <VideoPlayer />}
-      <div className="app">
+      <div
+        className="app"
+        style={isSectionSix ? { backgroundColor: "#202020" } : {}}
+      >
         <Header />
         <Outlet />
         <Footer />

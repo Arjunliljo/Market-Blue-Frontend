@@ -28,7 +28,6 @@ function HomeSectionSix() {
           <TechSlider reverse={true} />
         </div>
       </section>
-      ;
     </Parallax>
   );
 }

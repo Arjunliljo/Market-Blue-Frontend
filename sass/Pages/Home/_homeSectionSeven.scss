@@ -1,2 +1,38 @@
 .homeSectionSeven {
+  width: 100vw;
+  height: fit-content;
+  background-color: $mat-gray;
+}
+.homeSectionSeven .container {
+  padding: 5rem 0;
+  height: 100%;
+}
+
+.content-box {
+  @include fillArea;
+  @include grid("2-col", 2rem);
+}
+
+.rightSideTextbox {
+  height: fit-content;
+  padding: 3rem 0;
+}
+
+.leftSideTextbox {
+  position: relative;
+
+  &__mainHeading {
+    position: sticky;
+    top: 40%;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+}
+.leftSideTextbox h2 {
+  font-size: $font-medium;
+  color: $mid-gray;
+}
+.leftSideTextbox span {
+  color: $light-blue;
 }
