@@ -3,10 +3,11 @@
   height: 100vh;
   background-color: $mat-gray;
   background-image: radial-gradient(circle, #00008b83 1%, $mat-gray 40%);
-
+  position: relative;
   text-align: center;
   flex-direction: column;
-  padding: 8rem;
+  padding: 5rem 0;
+
   &-span {
     color: $light-blue;
     text-transform: uppercase;
@@ -35,6 +36,7 @@
   border: 0.08px solid rgba(189, 188, 188, 0.185);
   box-shadow: 0 0 20px 10px rgba(1, 1, 68, 0.5);
 
+  z-index: 10;
   @include center(flex);
 }
 .logoContainer {
