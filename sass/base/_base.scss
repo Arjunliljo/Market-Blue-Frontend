@@ -27,7 +27,7 @@ section {
 }
 .container {
   background-color: transparent;
-  width: 80%;
+  width: min(80%, 100vw);
   @include centerContent;
 }
 
