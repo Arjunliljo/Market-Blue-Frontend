@@ -12,8 +12,8 @@ function Home() {
     <Main>
       <HomeSectionOne />
       <HomeSectionTwo />
-      {/* <HomeSectionThree />
-      <HomeSectionFour />
+      <HomeSectionThree />
+      {/* <HomeSectionFour />
       <HomeSectionFive />
       <HomeSectionSix />
       <HomeSectionSeven /> */}

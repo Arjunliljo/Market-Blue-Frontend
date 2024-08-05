@@ -19,11 +19,47 @@
   gap: 3rem;
   justify-content: space-between;
   height: 100%;
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
 }
 .parallax-inner {
   background-color: rgba(5, 0, 29, 0.8);
   @include fillArea;
   color: white;
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    height: 101%; //adjustment
+  }
+  @include respond(phone) {
+    height: 101%; //adjustment
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
 
   &__text {
     @include center(flex);
@@ -37,6 +73,22 @@
 .parallax-inner h2 {
   color: white;
   mix-blend-mode: normal;
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    margin: 0 auto;
+  }
+  @include respond(phone) {
+    margin: 0 auto;
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
 }
 .parallax-inner h3 {
   color: white;
