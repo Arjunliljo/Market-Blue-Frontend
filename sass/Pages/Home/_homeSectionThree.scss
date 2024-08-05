@@ -95,3 +95,22 @@
   font-size: 1.6rem;
   font-weight: 400;
 }
+.logoSwiperContainer {
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    width: 100%;
+    padding-bottom: 1rem; //Adjustment
+  }
+  @include respond(phone) {
+    width: 100%;
+    padding-bottom: 1rem; //Adjustment
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
+}
