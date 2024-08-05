@@ -12,7 +12,6 @@ function HomeSectionOne() {
   // const { homeAnimationDelay, initialMount } = useAnim();
   const initialMount = useSelector((state) => state.timing.initialMount);
   const { isDesktop } = useSelector((state) => state.breakPoints);
-  console.log(isDesktop);
 
   const targetRef = useRef(null);
   useObserver(targetRef, setIsSectionOne);

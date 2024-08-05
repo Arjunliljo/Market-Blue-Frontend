@@ -6,6 +6,7 @@ const initialState = {
   isTablets: false,
   isBigTablets: false,
   isDesktop: false,
+  curWidth: window.innerWidth,
 };
 
 export const eventSlice = createSlice({
@@ -27,6 +28,9 @@ export const eventSlice = createSlice({
     setIsDesktop(state, action) {
       state.isDesktop = action.payload;
     },
+    setCurWidth(state, action) {
+      state.curWidth = action.payload;
+    },
   },
 });
 
@@ -36,5 +40,6 @@ export const {
   setIsTablets,
   setIsBigTablets,
   setIsDesktop,
+  setCurWidth,
 } = eventSlice.actions;
 export default eventSlice.reducer;
