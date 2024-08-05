@@ -24,7 +24,7 @@ function HomeSectionOne() {
         style={initialMount ? { animation: "none" } : {}}
       >
         {isDesktop && initialMount && <CanvasAnimation />}
-        <StarBackgroundAnim style={{ height: "200%" }} />
+        <StarBackgroundAnim style={isDesktop ? { height: "200%" } : {}} />
 
         <div className="container">
           <PrimaryTextBox style={initialMount ? { animation: "none" } : {}} />
