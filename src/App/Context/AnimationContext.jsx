@@ -1,11 +1,7 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-} from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
 import { useDispatch } from "react-redux";
 import { setInitialMount } from "../../Global/TimingSlice/timingSlice";
+import breakPointsSetter from "../Hooks/breakPointsSetter";
 
 // Create the context
 const AnimationContext = createContext();

@@ -2,9 +2,9 @@
   width: 100vw;
   height: 100vh;
   position: relative;
+
   &__container {
     @include fillArea;
-
     color: white;
     animation: homeSectionAnim 1.5s cubic-bezier(0.73, -0.03, 0.17, 0.99);
     overflow: hidden;
@@ -13,6 +13,62 @@
 .homeSectionOne .container {
   position: relative;
   height: 100%;
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    text-align: center;
+  }
+  @include respond(phone) {
+    text-align: center;
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
+}
+
+.thumbnailContainer {
+  position: absolute;
+  right: 0;
+  bottom: 10rem;
+  background-color: black;
+  border: 2px solid blue;
+  z-index: 2;
+  width: 20rem;
+  height: 10rem;
+  cursor: pointer;
+  border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(158, 158, 158);
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    top: 70vh;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  @include respond(phone) {
+    top: 20%;
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
+}
+
+.homeBtnContainer {
+  width: 100%;
 }
 
 @keyframes homeSectionAnim {

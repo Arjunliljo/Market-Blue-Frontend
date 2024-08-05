@@ -7,7 +7,9 @@ function PrimaryTextBox({ style }) {
         We Create <br />
         <span>Execptional</span> Digital <br /> Experiance
       </h1>
-      <HomeBtn>button</HomeBtn>
+      <div className="homeBtnContainer">
+        <HomeBtn>button</HomeBtn>
+      </div>
     </div>
   );
 }

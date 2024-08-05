@@ -5,11 +5,10 @@ import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer";
 import { useSelector } from "react-redux";
 
 function App() {
-  const { isClickedThumbnail, isSectionSix, isBlackMode } = useSelector(
+  const { isClickedThumbnail, isSectionSix } = useSelector(
     (state) => state.events
   );
 
-  console.log(isBlackMode);
   return (
     <>
       {isClickedThumbnail && <VideoPlayer />}

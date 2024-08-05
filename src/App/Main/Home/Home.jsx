@@ -11,12 +11,12 @@ function Home() {
   return (
     <Main>
       <HomeSectionOne />
-      <HomeSectionTwo />
+      {/* <HomeSectionTwo />
       <HomeSectionThree />
       <HomeSectionFour />
       <HomeSectionFive />
       <HomeSectionSix />
-      <HomeSectionSeven />
+      <HomeSectionSeven /> */}
     </Main>
   );
 }

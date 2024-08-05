@@ -29,13 +29,28 @@
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
-
   position: absolute;
   top: 30%;
   font-size: 3rem;
   z-index: 2;
   animation: homeContentAnim 3s ease forwards;
   backface-visibility: hidden;
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    top: 20%;
+  }
+  @include respond(phone) {
+    top: 20%;
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
 }
 .primary-text-box h1 {
   font-size: 48px;

@@ -18,7 +18,7 @@ function Thumbnail() {
   return (
     <div
       onClick={handleClick}
-      className={styles.thumbnailContainer}
+      className="thumbnailContainer"
       style={style}
     ></div>
   );

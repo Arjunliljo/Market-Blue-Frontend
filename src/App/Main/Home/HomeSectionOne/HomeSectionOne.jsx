@@ -11,6 +11,8 @@ import { setIsSectionOne } from "../../../../Global/Events/eventSlice";
 function HomeSectionOne() {
   // const { homeAnimationDelay, initialMount } = useAnim();
   const initialMount = useSelector((state) => state.timing.initialMount);
+  const { isDesktop } = useSelector((state) => state.breakPoints);
+  console.log(isDesktop);
 
   const targetRef = useRef(null);
   useObserver(targetRef, setIsSectionOne);
@@ -22,12 +24,12 @@ function HomeSectionOne() {
         // once animated then we don't want this navigation while routing
         style={initialMount ? { animation: "none" } : {}}
       >
-        {/* This is only for get rid of canvas bug  */}
-        {initialMount && <CanvasAnimation />}
-
+        {isDesktop && initialMount && <CanvasAnimation />}
         <StarBackgroundAnim style={{ height: "200%" }} />
+
         <div className="container">
           <PrimaryTextBox style={initialMount ? { animation: "none" } : {}} />
+
           <Thumbnail />
         </div>
       </div>

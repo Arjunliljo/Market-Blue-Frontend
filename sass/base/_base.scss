@@ -6,7 +6,6 @@
 }
 html {
   font-size: 10px;
-  scrollbar-color: yellow;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -28,28 +27,28 @@ section {
 }
 .container {
   background-color: transparent;
-  width: min(80%, 100vw);
+  width: 80%;
   @include centerContent;
 }
 
-/* The scrollbar itself */
-::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-  height: 12px; /* Height of the scrollbar for horizontal scrollbar */
-}
+// /* The scrollbar itself */
+// ::-webkit-scrollbar {
+//   width: 12px; /* Width of the scrollbar */
+//   height: 12px; /* Height of the scrollbar for horizontal scrollbar */
+// }
 
-/* The part of the scrollbar track */
-::-webkit-scrollbar-track {
-  background: $primary-blue; /* Background color of the track */
-}
+// /* The part of the scrollbar track */
+// ::-webkit-scrollbar-track {
+//   background: $primary-blue; /* Background color of the track */
+// }
 
-/* The part of the scrollbar thumb */
-::-webkit-scrollbar-thumb {
-  background: $light-gray; /* Background color of the thumb */
-  border-radius: 6px; /* Rounded corners for the thumb */
-}
+// /* The part of the scrollbar thumb */
+// ::-webkit-scrollbar-thumb {
+//   background: $light-gray; /* Background color of the thumb */
+//   border-radius: 6px; /* Rounded corners for the thumb */
+// }
 
-/* The part of the scrollbar thumb when hovered */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Background color of the thumb when hovered */
-}
+// /* The part of the scrollbar thumb when hovered */
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #555; /* Background color of the thumb when hovered */
+// }
