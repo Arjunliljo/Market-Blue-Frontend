@@ -16,11 +16,11 @@ function AboutText({
         <h2 className="container__title section-title">{title}</h2>
       </Parallax>
 
-      <Parallax speed={10} disabled={isParllaxDiabled}>
+      <Parallax speed={9} disabled={isParllaxDiabled}>
         <p className="container__text section-text">{t1}</p>
       </Parallax>
 
-      <Parallax speed={10} disabled={isParllaxDiabled}>
+      <Parallax speed={9} disabled={isParllaxDiabled}>
         <p className="container__text section-text">
           Thinkers. Doers. Agents of change. A full-service digital marketing
           agency with passion for ingenuity and innovation in every medium,

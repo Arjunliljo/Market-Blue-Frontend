@@ -8,7 +8,7 @@ import AboutImages from "./AboutImages";
 
 function HomeSectionFour() {
   const targetRef = useRef(null);
-  // useObserver(targetRef, setIsSectionFour, 0.8);
+  useObserver(targetRef, setIsSectionFour, 0.9);
 
   return (
     <section ref={targetRef} className="homeSectionFour">

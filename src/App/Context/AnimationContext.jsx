@@ -3,9 +3,7 @@ import {
   useContext,
   useEffect,
   useReducer,
-  useState,
 } from "react";
-import initialDelayTimer from "../HelperFuntions/InitialDelayTimer";
 import { useDispatch } from "react-redux";
 import { setInitialMount } from "../../Global/TimingSlice/timingSlice";
 

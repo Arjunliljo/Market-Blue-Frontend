@@ -1,9 +1,16 @@
+import { useRef } from "react";
 import LeftSideTextBox from "./LeftSideTextBox";
 import RightSideTextBox from "./RightSideTextBox";
+import useObserver from "../../../Hooks/useObserver";
+import { setIsSectionSeven } from "../../../../Global/Events/eventSlice";
 
 function HomeSectionSeven() {
+  const targetRef = useRef(null);
+
+  useObserver(targetRef, setIsSectionSeven, 0);
+
   return (
-    <section className="homeSectionSeven">
+    <section ref={targetRef} className="homeSectionSeven">
       <div className="container">
         <div className="content-box">
           <LeftSideTextBox />

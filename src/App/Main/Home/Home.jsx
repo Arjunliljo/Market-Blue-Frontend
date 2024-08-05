@@ -1,5 +1,4 @@
 import Main from "../Main";
-import HomeSectionEight from "./HomeSectionEight/HomeSectionEight";
 import HomeSectionFive from "./HomeSectionFIve/HomeSectionFive";
 import HomeSectionFour from "./HomeSectionFour/HomeSectionFour";
 import HomeSectionOne from "./HomeSectionOne/HomeSectionOne";

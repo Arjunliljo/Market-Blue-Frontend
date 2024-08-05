@@ -1,6 +1,9 @@
 import { Parallax } from "react-scroll-parallax";
 import Expertise from "./Expertise";
 import { useSelector } from "react-redux";
+import { useRef } from "react";
+import useObserver from "../../../Hooks/useObserver";
+import { setIsSectionFive } from "../../../../Global/Events/eventSlice";
 
 function HomeSectionFive() {
   const arr = [];
@@ -19,10 +22,14 @@ function HomeSectionFive() {
     }
   }
 
+  const targetRef = useRef(null);
+  useObserver(targetRef, setIsSectionFive, 0.1);
+
   const { isSectionSix } = useSelector((state) => state.events);
 
   return (
     <section
+      ref={targetRef}
       className="homeSectionFive"
       style={isSectionSix ? { backgroundColor: "#202020" } : {}}
     >
