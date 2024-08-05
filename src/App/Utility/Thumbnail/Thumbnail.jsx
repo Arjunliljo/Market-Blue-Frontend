@@ -1,6 +1,5 @@
-import styles from "./Thumbnail.module.css";
 import useScrollParalax from "../../Hooks/scrollPralax";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   setIsClickedThumbnail,
   setIsVideoOn,

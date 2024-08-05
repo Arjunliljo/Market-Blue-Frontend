@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function FeaturedVideo({ path, style, thumbnail }) {
+function FeaturedVideo({ path, style }) {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [delay, setDelay] = useState(true);
 

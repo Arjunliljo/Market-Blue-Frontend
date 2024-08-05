@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function useScrollParalax() {
   const [style, setStyle] = useState({});
+
+  const { isSmallPhone, isPhone } = useSelector((state) => state.breakPoints);
+
+  console.log(isPhone, isSmallPhone);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,9 +22,15 @@ export default function useScrollParalax() {
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (!isSmallPhone || !isPhone)
+      window.addEventListener("scroll", handleScroll);
+    return () => {
+      if (!isPhone || isSmallPhone)
+        window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+
+  if (isPhone || isSmallPhone) return [{}, null];
 
   return [style, setStyle];
 }
