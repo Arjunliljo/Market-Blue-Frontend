@@ -1,4 +1,5 @@
 import ContactBtn from "../../../Utility/ContactBtn/ContactBtn";
+import SecondaryBtn from "../../../Utility/SecondaryBtn/SecondaryBtn";
 
 function ParallaxContent() {
   return (
@@ -12,7 +13,8 @@ function ParallaxContent() {
           </h3>
         </div>
         <div className="parallax-inner__btn">
-          <ContactBtn />
+          {/* <ContactBtn /> */}
+          <SecondaryBtn>Contact now</SecondaryBtn>
         </div>
       </div>
     </div>

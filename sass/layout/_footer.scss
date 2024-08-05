@@ -1,4 +1,28 @@
 .footer {
   width: 100vw;
+}
+.upperFooter {
+  background-color: $primary-blue;
+  height: 100vh;
+}
+.upper-content-box {
+  padding: 10rem 0;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  &--heading {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}
+
+.footer-btns {
+  @include center(flex);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.lowerFooter {
+  background-color: $mat-gray;
   height: 100vh;
 }

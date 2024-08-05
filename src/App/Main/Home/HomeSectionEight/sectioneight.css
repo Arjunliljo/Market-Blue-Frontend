@@ -1,0 +1,4 @@
+#parallax-heading {
+  display: flex;
+  transition: all 1s;
+}

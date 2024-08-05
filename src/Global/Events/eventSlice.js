@@ -7,6 +7,7 @@ const initialState = {
   isSectionTwo: false,
   isSectionFour: false,
   isSectionSix: false,
+  isSectionEight: false,
   isBlackMode: false,
   isHeader: false,
 };
@@ -39,6 +40,9 @@ export const eventSlice = createSlice({
     setIsBlackMode: (state, action) => {
       state.isBlackMode = action.payload;
     },
+    setIsSectionEight: (state, action) => {
+      state.isSectionEight = action.payload;
+    },
   },
 });
 
@@ -51,5 +55,6 @@ export const {
   setIsHeader,
   setIsSectionSix,
   setIsBlackMode,
+  setIsSectionEight,
 } = eventSlice.actions;
 export default eventSlice.reducer;
