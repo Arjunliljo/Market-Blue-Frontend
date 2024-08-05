@@ -1,12 +1,13 @@
 .footer {
   width: 100vw;
+  position: relative;
 }
 .upperFooter {
   background-color: $primary-blue;
   height: 100vh;
 }
 .upper-content-box {
-  padding: 10rem 0;
+  padding: 12rem 0;
   width: 50%;
   margin: 0 auto;
   text-align: center;
@@ -25,4 +26,56 @@
 .lowerFooter {
   background-color: $mat-gray;
   height: 100vh;
+  position: relative;
+  &-content-box {
+    position: absolute;
+    @include center("center");
+
+    top: 60%;
+
+    text-align: center;
+
+    & > :last-child {
+      margin-top: 3rem;
+    }
+
+    & h3 {
+      color: $text-gray;
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+
+    & h4 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      transition: all 0.5s;
+      color: $mid-gray;
+      backface-visibility: hidden;
+      cursor: pointer;
+    }
+    & h4:hover {
+      transform: scale(1.1);
+      color: $light-blue;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+        /* Main shadow */ 0 6px 6px rgba(0, 0, 0, 0.23); /* Subtle shadow for depth */
+    }
+  }
+}
+
+.ipadTv {
+  @include center("center");
+  width: 50%;
+  z-index: 2;
+}
+.footer_video {
+  background-color: yellow;
+  width: 49%;
+  @include center("center");
+  z-index: 1;
+  border-radius: 3rem;
+  overflow: hidden;
+  background-color: $mat-gray;
+}
+.ipadTv img {
+  width: 100%;
 }
