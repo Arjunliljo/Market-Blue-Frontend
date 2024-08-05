@@ -7,7 +7,14 @@ function AboutText({
   t1 = " We are a proactive creative agency focused on imagining and building highly-interactive websites that push the limits of design and development.",
   t2,
 }) {
-  const isParllaxDiabled = useSelector((state) => state.events.isSectionFour);
+  let isParllaxDiabled = useSelector((state) => state.events.isSectionFour);
+
+  const { isSmallPhone, isPhone } = useSelector((state) => state.breakPoints);
+
+  const isSmallDevice = isPhone || isSmallPhone;
+
+  if (isSmallDevice) isParllaxDiabled = false;
+
   return (
     <Parallax speed={-10} disabled={isParllaxDiabled}>
       <Parallax speed={5} disabled={isParllaxDiabled}>

@@ -20,6 +20,22 @@
 .about-section-img-box {
   margin-top: 5rem;
   @include grid("2-col", 3rem);
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include respond(phone) {
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
 }
 .about-section-img-container {
   border-radius: 2rem;

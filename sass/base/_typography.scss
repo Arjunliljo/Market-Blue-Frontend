@@ -9,6 +9,25 @@
   line-height: 130%;
   margin: 2rem 0;
   color: $mat-gray;
+
+  ///////////////////////////////////////////////////////////////////
+  /// ///////////////////////////
+  /// ////////////////////
+  // Media Query
+
+  @include respond(smallPhone) {
+    width: 100%;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  @include respond(phone) {
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  /* ------------------------------------------------
+    ---------------------------------------------------
+    ------------------------------------------------ */
 }
 .section-title-small {
   font-size: 2rem;

@@ -1,8 +1,13 @@
 import { Parallax } from "react-scroll-parallax";
 import Image from "../../../Utility/Image/Image";
+import { useSelector } from "react-redux";
 function AboutImages() {
+  const { isSmallPhone, isPhone } = useSelector((state) => state.breakPoints);
+
+  const speed = isPhone || isSmallPhone ? 10 : 15;
+
   return (
-    <Parallax speed={15}>
+    <Parallax speed={speed}>
       <div className="about-section-img-box">
         <div className="about-section-img-container">
           <Image

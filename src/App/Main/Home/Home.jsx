@@ -13,10 +13,10 @@ function Home() {
       <HomeSectionOne />
       <HomeSectionTwo />
       <HomeSectionThree />
-      {/* <HomeSectionFour />
-      <HomeSectionFive />
-      <HomeSectionSix />
-      <HomeSectionSeven /> */}
+      <HomeSectionFour />
+      {/* <HomeSectionFive /> */}
+      {/* <HomeSectionSix /> */}
+      {/* <HomeSectionSeven /> */}
     </Main>
   );
 }
