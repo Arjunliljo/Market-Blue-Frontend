@@ -14,9 +14,9 @@ function Home() {
       <HomeSectionTwo />
       <HomeSectionThree />
       <HomeSectionFour />
-      {/* <HomeSectionFive /> */}
-      {/* <HomeSectionSix /> */}
-      {/* <HomeSectionSeven /> */}
+      <HomeSectionFive />
+      <HomeSectionSix />
+      <HomeSectionSeven />
     </Main>
   );
 }
