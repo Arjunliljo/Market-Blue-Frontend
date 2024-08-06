@@ -15,7 +15,7 @@ function HomeSectionSix() {
         <Parallax speed={10}>
           <div className="sectionSix-text">
             <span className="homeSectionSix-span">Tech We Work With</span>
-            <h2>Seamless technologies we are working with</h2>
+            <h2>technologies we are working with</h2>
           </div>
         </Parallax>
         <div className="globecontainer">

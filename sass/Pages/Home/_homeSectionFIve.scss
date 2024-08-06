@@ -6,7 +6,7 @@
 
   @include respond(smallPhone) {
     height: fit-content;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
   }
   @include respond(phone) {
     height: fit-content;

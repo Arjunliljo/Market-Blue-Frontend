@@ -8,20 +8,45 @@
   flex-direction: column;
   padding: 5rem 0;
 
+  @include respond(smallPhone) {
+    background-image: radial-gradient(circle, $mat-gray 1%, $mat-gray 40%);
+    height: 85vh;
+  }
+  @include respond(phone) {
+    background-image: radial-gradient(circle, $mat-gray 1%, $mat-gray 40%);
+    height: 85vh;
+  }
+
   &-span {
     color: $light-blue;
     text-transform: uppercase;
     font-size: 1.6rem;
     letter-spacing: 0.4rem;
+
+    @include respond(smallPhone) {
+      letter-spacing: 0.1rem;
+    }
+    @include respond(phone) {
+      letter-spacing: 0.1rem;
+    }
   }
 }
 .homeSectionSix h2 {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   color: $mid-gray;
-  width: 70rem;
+  width: 60rem;
   font-size: $font-medium;
   margin: 0 auto;
+
+  @include respond(smallPhone) {
+    width: 80%;
+    font-size: 2rem;
+  }
+  @include respond(phone) {
+    width: 80%;
+    font-size: 2rem;
+  }
 }
 .globecontainer {
   @include center("center");
@@ -38,6 +63,17 @@
 
   z-index: 10;
   @include center(flex);
+
+  @include respond(smallPhone) {
+    width: 10rem;
+    height: 10rem;
+    top: 80%;
+  }
+  @include respond(phone) {
+    width: 10rem;
+    height: 10rem;
+    top: 80%;
+  }
 }
 .logoContainer {
   width: 10rem;
