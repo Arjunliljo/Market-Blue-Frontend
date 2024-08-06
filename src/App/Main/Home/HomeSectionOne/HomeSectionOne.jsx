@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import { useRef } from "react";
 import useObserver from "../../../Hooks/useObserver";
 import { setIsSectionOne } from "../../../../Global/Events/eventSlice";
+import { useAnim } from "../../../Context/AnimationContext";
+import { useResize } from "../../../Context/ResizingContext";
 
 function HomeSectionOne() {
   // const { homeAnimationDelay, initialMount } = useAnim();

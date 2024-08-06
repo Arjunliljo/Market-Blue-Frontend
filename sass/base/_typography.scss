@@ -35,6 +35,12 @@
   line-height: 130%;
   margin: 1rem 0;
   color: $title-gray;
+
+  @include respond(smallPhone) {
+    margin: 0;
+  }
+  @include respond(phone) {
+  }
 }
 .section-text {
   color: $text-gray;

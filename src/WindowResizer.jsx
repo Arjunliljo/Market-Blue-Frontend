@@ -1,7 +1,14 @@
 import { useEffect } from "react";
 import breakPointsSetter from "./App/Hooks/breakPointsSetter";
 import { useDispatch } from "react-redux";
-import { setCurWidth } from "./Global/BreakPoints/breakPoints";
+import {
+  setCurWidth,
+  setIsBigTablets,
+  setIsDesktop,
+  setIsPhone,
+  setIsSmallPhone,
+  setIsTablets,
+} from "./Global/BreakPoints/breakPoints";
 
 function WindowResizer() {
   const dispatch = useDispatch();
@@ -9,7 +16,11 @@ function WindowResizer() {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      breakPointsSetter(dispatch, width);
+      dispatch(setIsSmallPhone(width <= 575.98));
+      dispatch(setIsPhone(width >= 576 && width <= 767.98));
+      dispatch(setIsTablets(width >= 768 && width <= 991.98));
+      dispatch(setIsBigTablets(width >= 992 && width <= 1199.98));
+      dispatch(setIsDesktop(width >= 1200));
       dispatch(setCurWidth(width));
     };
 

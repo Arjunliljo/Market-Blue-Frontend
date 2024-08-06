@@ -1,7 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { useDispatch } from "react-redux";
 import { setInitialMount } from "../../Global/TimingSlice/timingSlice";
-import breakPointsSetter from "../Hooks/breakPointsSetter";
 
 // Create the context
 const AnimationContext = createContext();
@@ -25,7 +24,7 @@ function reducer(state, action) {
 // Create the provider component
 function AnimationProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { homeAnimationDelay, initialMount } = state;
+  const { initialMount } = state;
 
   const reduxDispatch = useDispatch();
 

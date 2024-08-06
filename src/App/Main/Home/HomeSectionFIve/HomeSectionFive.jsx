@@ -26,6 +26,9 @@ function HomeSectionFive() {
   useObserver(targetRef, setIsSectionFive, 0.1);
 
   const { isSectionSix } = useSelector((state) => state.events);
+  const { isPhone, isSmallPhone } = useSelector((state) => state.breakPoints);
+
+  const parallaxDisable = isPhone || isSmallPhone;
 
   return (
     <section
@@ -33,14 +36,16 @@ function HomeSectionFive() {
       className="homeSectionFive"
       style={isSectionSix ? { backgroundColor: "#202020" } : {}}
     >
-      <Parallax speed={20}>
+      <Parallax speed={20} disabled={parallaxDisable}>
         <div className="container">
           <span className="section-about-title">Experts in</span>
           <h2 className="section-title">Crafting Concepts</h2>
 
-          {arr.map((style, i) => (
-            <Expertise style={style} key={i} id={i} />
-          ))}
+          <div className="expertizeContainer">
+            {arr.map((style, i) => {
+              return <Expertise style={style} key={i} id={i} />;
+            })}
+          </div>
         </div>
       </Parallax>
     </section>

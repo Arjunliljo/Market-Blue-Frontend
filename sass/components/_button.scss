@@ -6,4 +6,11 @@
   font-weight: 600;
   padding: 1rem 0;
   cursor: pointer;
+
+  @include respond(smallPhone) {
+    padding: 0;
+  }
+  @include respond(phone) {
+    padding: 0;
+  }
 }

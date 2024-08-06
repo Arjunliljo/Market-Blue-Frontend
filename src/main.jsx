@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer.jsx";
 import { ParallaxProvider } from "react-scroll-parallax";
 import WindowResizer from "./WindowResizer.jsx";
+import { ResizingProvider } from "./App/Context/ResizingContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,14 +47,14 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <WindowResizer />
-      <AnimationProvider>
-        <ParallaxProvider>
-          <RouterProvider router={router} />
-        </ParallaxProvider>
-      </AnimationProvider>
-    </Provider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
+    <WindowResizer />
+    <AnimationProvider>
+      <ParallaxProvider>
+        <RouterProvider router={router} />
+      </ParallaxProvider>
+    </AnimationProvider>
+  </Provider>
+  // </React.StrictMode>
 );

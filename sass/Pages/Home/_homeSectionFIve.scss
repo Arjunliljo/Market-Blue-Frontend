@@ -3,6 +3,14 @@
   height: 400vh;
   background-color: $white-color;
   transition: all 0.2s;
+
+  @include respond(smallPhone) {
+    height: fit-content;
+    padding-bottom: 10rem;
+  }
+  @include respond(phone) {
+    height: fit-content;
+  }
 }
 .homeSectionFive .container {
   height: 100%;

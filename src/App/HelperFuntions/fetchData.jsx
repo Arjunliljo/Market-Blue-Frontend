@@ -5,12 +5,13 @@ export default function fetchData(type) {
     case 0:
       title = "Brand Identity";
       expertise = "Branding";
-      src = "./images/expertise-1.svg";
+      src = "https://www.konceptslab.com/assets/img/homepage-mobile.jpg";
       break;
     case 1:
       title = "Mobile & Web App";
       expertise = "Branding";
-      src = "https://www.konceptslab.com/assets/img/homepage-mobile.jpg";
+      src = "./images/expertise-1.svg";
+
       break;
     case 2:
       title = "Videography, Animation and Photography";

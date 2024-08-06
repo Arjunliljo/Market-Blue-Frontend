@@ -6,8 +6,6 @@ export default function useScrollParalax() {
 
   const { isSmallPhone, isPhone } = useSelector((state) => state.breakPoints);
 
-  console.log(isPhone, isSmallPhone);
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
