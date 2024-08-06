@@ -10,6 +10,10 @@
     gap: 3rem;
   }
 }
+.expertiseTitle {
+  margin-bottom: 3rem;
+  margin-top: 0rem;
+}
 
 .expertise {
   width: 50%;
@@ -107,6 +111,7 @@
     }
   }
 }
+
 .expertise .learn-more {
   opacity: 0;
   transform: translateY(1rem);

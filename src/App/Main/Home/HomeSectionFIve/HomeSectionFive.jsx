@@ -39,7 +39,7 @@ function HomeSectionFive() {
       {parallaxDisable ? (
         <div className="container">
           <span className="section-about-title">Experts in</span>
-          <h2 className="section-title">Crafting Concepts</h2>
+          <h2 className="section-title expertiseTitle">Crafting Concepts</h2>
 
           <div className="expertizeContainer">
             {arr.map((style, i) => {
