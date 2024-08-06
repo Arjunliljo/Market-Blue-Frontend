@@ -67,12 +67,12 @@
   @include respond(smallPhone) {
     width: 10rem;
     height: 10rem;
-    top: 80%;
+    top: 60vh;
   }
   @include respond(phone) {
     width: 10rem;
     height: 10rem;
-    top: 80%;
+    top: 60vh;
   }
 }
 .logoContainer {
