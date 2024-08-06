@@ -2,10 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import fetchData from "../../../HelperFuntions/fetchData";
 import Image from "../../../Utility/Image/Image";
 
-fetchData;
-
-function 
-Expertise({ style, id }) {
+function Expertise({ style, id }) {
   const data = fetchData(id);
   const [anim, setAnim] = useState(false);
   const targetRef = useRef(null);

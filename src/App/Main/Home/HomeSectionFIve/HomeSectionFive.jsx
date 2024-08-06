@@ -7,29 +7,38 @@ import { setIsSectionFive } from "../../../../Global/Events/eventSlice";
 
 function HomeSectionFive() {
   const arr = [];
-  const expertiseLength = 8;
-  const height = 70;
-  for (let i = 0, j = 0; i < expertiseLength; i++) {
-    if (i % 2 === 0) {
-      arr.push({ right: "0", top: `${j * height}rem`, height: `${height}rem` });
-    } else {
-      arr.push({
-        left: "0",
-        top: `${j * height + 20}rem`,
-        height: `${height}rem`,
-      });
-      j++;
-    }
-  }
+  const { isPhone, isSmallPhone } = useSelector((state) => state.breakPoints);
 
   const targetRef = useRef(null);
   useObserver(targetRef, setIsSectionFive, 0.1);
 
   const { isSectionSix } = useSelector((state) => state.events);
-  const { isPhone, isSmallPhone } = useSelector((state) => state.breakPoints);
-
   const parallaxDisable = isPhone || isSmallPhone;
-  console.log(parallaxDisable);
+
+  const calcPosition = () => {
+    const expertiseLength = 8;
+    const height = 70;
+    for (let i = 0, j = 0; i < expertiseLength; i++) {
+      if (i % 2 === 0) {
+        arr.push({
+          right: "0",
+          top: `${j * height}rem`,
+          height: `${height}rem`,
+        });
+      } else {
+        arr.push({
+          left: "0",
+          top: `${j * height + 20}rem`,
+          height: `${height}rem`,
+        });
+        j++;
+      }
+    }
+  };
+
+  // calculate positions if not smaller devices
+  calcPosition();
+
   return (
     <section
       ref={targetRef}
@@ -43,6 +52,7 @@ function HomeSectionFive() {
 
           <div className="expertizeContainer">
             {arr.map((style, i) => {
+              if (parallaxDisable) style = {};
               return <Expertise style={style} key={i} id={i} />;
             })}
           </div>
