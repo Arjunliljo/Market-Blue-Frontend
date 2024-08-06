@@ -9,7 +9,7 @@ import { Parallax } from "react-scroll-parallax";
 function HomeSectionSeven() {
   const targetRef = useRef(null);
 
-  useObserver(targetRef, setIsSectionSeven, 0.1);
+  useObserver(targetRef, setIsSectionSeven, 0);
 
   const { isPhone, isSmallPhone } = useSelector((state) => state.breakPoints);
 
