@@ -38,6 +38,8 @@
 
   @include respond(smallPhone) {
     margin: 0;
+
+    line-height: 120%;
   }
   @include respond(phone) {
   }

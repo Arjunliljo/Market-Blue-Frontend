@@ -6,6 +6,15 @@
 .homeSectionSeven .container {
   padding: 5rem 0;
   height: 100%;
+
+  @include respond(smallPhone) {
+    padding: 0;
+    padding-bottom: 5rem;
+  }
+  @include respond(phone) {
+    padding: 0;
+    padding-bottom: 5rem;
+  }
 }
 
 .content-box {
