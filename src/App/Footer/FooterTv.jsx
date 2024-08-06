@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import FeaturedVideo from "../Utility/FeaturedVideo";
 
-function FooterTv() {
+function FooterTv({ isSmall }) {
   const imageRef = useRef(null);
   const videoRef = useRef(null);
   const [videoHeight, setVideoHeight] = useState(0);
@@ -22,6 +22,8 @@ function FooterTv() {
     return () => window.removeEventListener("resize", updateVideoHeight);
   }, []);
 
+  const threshold = isSmall ? 0 : 20;
+
   return (
     <>
       <div className="ipadTv">
@@ -30,7 +32,7 @@ function FooterTv() {
       <div
         ref={videoRef}
         className="footer_video"
-        style={{ height: `${videoHeight - 20}px` }}
+        style={{ height: `${videoHeight - threshold}px` }}
       >
         <FeaturedVideo path={"./Videos/FeaturedVideoOne.mov"} />
       </div>

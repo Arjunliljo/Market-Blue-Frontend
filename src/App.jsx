@@ -3,7 +3,6 @@ import Header from "./App/Header/Header";
 import Footer from "./App/Footer/Footer";
 import VideoPlayer from "./App/Utility/VideoPlayer/VideoPlayer";
 import { useSelector } from "react-redux";
-import WindowResizer from "./WindowResizer";
 
 function App() {
   const { isClickedThumbnail, isSectionSix } = useSelector(
