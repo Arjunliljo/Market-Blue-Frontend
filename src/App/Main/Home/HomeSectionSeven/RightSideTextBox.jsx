@@ -11,7 +11,7 @@ import {
 function RightSideTextBox() {
   return (
     <div className="rightSideTextbox">
-      <RightSideBoxContents num="1" type="discovery" style={{ color: "red" }}>
+      <RightSideBoxContents num="1" type="discovery">
         <HiEnvelope />
       </RightSideBoxContents>
       <RightSideBoxContents num="2" type="maping">

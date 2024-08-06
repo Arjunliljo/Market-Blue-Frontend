@@ -1,7 +1,7 @@
 import { IconContext } from "react-icons";
 import { useEffect, useRef, useState } from "react";
 
-function RightSideBoxContents({ children, type, style, num }) {
+function RightSideBoxContents({ children, type, num }) {
   let heading, text;
 
   const targetRef = useRef(null);

@@ -11,11 +11,27 @@
 .content-box {
   @include fillArea;
   @include grid("2-col", 2rem);
+
+  @include respond(smallPhone) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 .rightSideTextbox {
   height: fit-content;
   padding: 3rem 0;
+
+  @include respond(smallPhone) {
+    padding: 0;
+  }
+  @include respond(phone) {
+    padding: 0;
+  }
 }
 
 .leftSideTextbox {
@@ -27,11 +43,25 @@
     width: 90%;
     margin: 0 auto;
     margin-bottom: 5rem;
+
+    @include respond(smallPhone) {
+      position: static;
+    }
+    @include respond(phone) {
+      position: static;
+    }
   }
 }
 .leftSideTextbox h2 {
   font-size: $font-medium;
   color: $mid-gray;
+
+  @include respond(smallPhone) {
+    padding-bottom: 2rem;
+  }
+  @include respond(phone) {
+    padding-bottom: 2rem;
+  }
 }
 .leftSideTextbox span {
   color: $light-blue;
