@@ -1,4 +1,4 @@
-$height: 80vh;
+$height: 70rem;
 $tvTop: 50rem;
 
 .footer {
@@ -10,6 +10,7 @@ $tvTop: 50rem;
   height: 100vh;
 
   @include respond(smallPhone) {
+    height: $height;
   }
   @include respond(phone) {
     height: $height;
@@ -31,8 +32,8 @@ $tvTop: 50rem;
   &--heading {
     font-size: 6rem;
     line-height: 8rem;
-
     @include respond(smallPhone) {
+      padding: 0rem 2rem;
       font-size: 4rem;
       line-height: 4.3rem;
     }
@@ -60,23 +61,29 @@ $tvTop: 50rem;
   position: relative;
 
   @include respond(smallPhone) {
-    height: $height;
+    height: calc($height - 20rem);
   }
   @include respond(phone) {
-    height: $height;
+    height: calc($height - 20rem);
   }
 
   &-content-box {
     padding: 3rem;
     position: absolute;
     @include center("center");
-
     top: 60%;
-
     text-align: center;
 
     & > :last-child {
       margin-top: 3rem;
+    }
+
+    @include respond(smallPhone) {
+      position: static;
+      transform: none;
+      padding-top: 8rem;
+    }
+    @include respond(phone) {
     }
 
     & h3 {
