@@ -8,6 +8,8 @@
     color: white;
     animation: homeSectionAnim 1.5s cubic-bezier(0.73, -0.03, 0.17, 0.99);
     overflow: hidden;
+
+    @include center(flex);
   }
 }
 .homeSectionOne .container {
@@ -80,4 +82,25 @@
     transform: scale(1) rotate(0deg);
     border-radius: 0rem;
   }
+}
+
+.logo-head {
+  position: absolute;
+  z-index: 100;
+  top: 3rem;
+}
+.content {
+  position: absolute;
+  z-index: 100;
+}
+
+.sayHi {
+  position: absolute;
+  z-index: 100;
+  bottom: 13rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  color: blue;
+  cursor: pointer;
+  background-color: white;
 }

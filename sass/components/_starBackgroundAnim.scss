@@ -52,7 +52,7 @@ $stars-big: generateStars(100);
   width: 100vw;
   position: absolute;
   z-index: 0;
-  background: radial-gradient(ellipse at bottom, #000000 0%, #191f24 100%);
+  background: radial-gradient(ellipse at bottom, #000000 0%, #000000 100%);
   overflow: hidden;
   @include translate50;
 }

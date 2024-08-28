@@ -17,6 +17,8 @@ body {
   background-color: $light-gray;
   width: 100vw;
   position: relative;
+  max-height: 100vh;
+  overflow: hidden;
 }
 .main {
   position: relative;

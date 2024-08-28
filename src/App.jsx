@@ -16,9 +16,9 @@ function App() {
         className="app"
         style={isSectionSix ? { backgroundColor: "#202020" } : {}}
       >
-        <Header />
+        {/* <Header /> */}
         <Outlet />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

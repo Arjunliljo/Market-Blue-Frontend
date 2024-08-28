@@ -28,10 +28,21 @@ function HomeSectionOne() {
         {isDesktop && initialMount && <CanvasAnimation />}
         <StarBackgroundAnim style={isDesktop ? { height: "200%" } : {}} />
 
-        <div className="container">
-          <PrimaryTextBox style={initialMount ? { animation: "none" } : {}} />
+        <div className="logo-head">
+          <img src="./MarketLub.png" alt="" />
+        </div>
+        <div className="content">
+          <img src="./content.png" alt="" />
+        </div>
 
-          <Thumbnail />
+        <a className="sayHi" href="https://wa.me/916282194930" target="_blank">
+          Say Hi
+        </a>
+
+        <div className="container">
+          {/* <PrimaryTextBox style={initialMount ? { animation: "none" } : {}} /> */}
+
+          {/* <Thumbnail /> */}
         </div>
       </div>
     </section>
